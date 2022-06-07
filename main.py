@@ -55,5 +55,13 @@ def options():
 
 
 
-fast_text(f"{bcolors.HEADER}         Welcome To\n Liverpool Central Library Server Management {bcolors.ENDC}\n\n") 
+fast_text(f"{bcolors.HEADER}         Welcome To\n Liverpool Central Library Server Management {bcolors.ENDC}\n\n")
+fast_text("Please enter the password\n")
+password=input("     >>    ")
+while password !="090477":
+    fast_text(f"{bcolors.FAIL}Incorrect, please try again \nYou have 999 tries remaining {bcolors.ENDC}\n")
+    password=input("     >>    ")
+
+wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
+print(f"{bcolors.OKGREEN} Access Granted \n \n Welcome Admin {bcolors.ENDC}\n\n")
 options()
