@@ -33,7 +33,7 @@ ans=["1","2","3","4","5","6"]
 #######################################
 
 def options():
-    fast_text(f"Please select from the following options: \n   1 - Access Asset Catalogue \n   2 - Access User Database\n   3 - Access System Settings \n   4 - Search System \n   5 - Access Server Manager \n   6 - Quit \nPlease input 1,2,3 or 4. Press 6 to quit")
+    fast_text(f"Please select from the following options: \n   1 - Access Asset Catalogue \n   2 - Access User Database\n   3 - Access System Settings \n   4 - Search System \n   5 - Access Server Management Tools \n   6 - Quit \nPlease input 1,2,3 or 4. Press 6 to quit")
     main_option=input("     >>    ")
 
     while main_option not in ans:

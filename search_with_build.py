@@ -23,6 +23,7 @@ import time
 #                                     #
 #######################################
 
+done_before=False
 
 #######################################
 #                                     #
@@ -31,13 +32,22 @@ import time
 #######################################
 
 def search_a(timeb): #takes variable from function call in main - couldn't do this any other way without circular imports?
+    global done_before, ans, ans1 
     answers=["1","2","3","4"]
-    fast_text("Initiating Search \n\n")
-    fast_text(f"{bcolors.WARNING}System Search currently semi-operational \nPlease build your search{bcolors.ENDC} \n\nPlease input your search term\n")
-    ans1=input("      >>    ")
-    fast_text("Please wait - search building\n")
-    wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
-    print(f" {bcolors.OKGREEN} if {ans1} in {bcolors.ENDC}")
+    if not done_before:
+        fast_text("Initiating Search \n\n")
+        fast_text(f"{bcolors.WARNING}System Search currently semi-operational \nPlease build your search{bcolors.ENDC} \n\nPlease input your search type \nPlease type {bcolors.OKGREEN} if, while or for \n{bcolors.ENDC}")
+        ans=input("      >>    ")
+        fast_text("Please wait - search building\n")
+        wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
+        fast_text("Please input your search term \n")
+        ans1=input("      >>    ")
+        wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
+        fast_text(f"Please input your operator \n Please type a {bcolors.OKGREEN}comparison operator, an arthimetic operator or a logical operator {bcolors.ENDC}\n")
+        ans1b=input("      >>    ")
+        print(f"{bcolors.OKGREEN}if {ans1} in {bcolors.ENDC}")
+        done_before=True
+
     fast_text("Where are you searching? \nSelect from the following options: \n\n 1 - System Log \n 2 - System Settings \n 3 - User Database \n 4 - Asset Catalogue \n\n Please type 1, 2, 3 or 4")
     ans2=input("      >>    ")
 
@@ -166,3 +176,5 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
         else:
             return
 
+
+search_a(4)
