@@ -42,11 +42,13 @@ def options():
         main_option=input("     >>    ")
 
     if main_option=="1":
-        as_cat()# the login puzzle
+        as_cat()# the random book title generator
         fast_text("What would you like to do? \n")
         options()
     elif main_option=="2":
-        print("for now")
+        fast_text(f"{bcolors.FAIL}Adding new assets is disabled until 23/07/2022 \n{bcolors.ENDC}")
+        fast_text("What would you like to do? \n")
+        options()
     elif main_option=="3":
         login()# the login puzzle
         fast_text("What would you like to do? \n")
