@@ -39,7 +39,7 @@ def login():
 
     while log_pin !=pin:
         fast_text(f"{bcolors.FAIL}Incorrect, please try again \nYou have 999 tries remaining {bcolors.ENDC}\n")
-        log_pin=input("")
+        log_pin=input("     >>    ")
     
     if done_before:
         fast_text(f"{bcolors.WARNING}Password changed successfully. Returning to main menu \n\n{bcolors.ENDC}")

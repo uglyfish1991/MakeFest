@@ -32,7 +32,7 @@ import time
 
 def search_a(timeb): #takes variable from function call in main - couldn't do this any other way without circular imports?
     answers=["1","2","3","4"]
-    fast_text("Initiating Search \n\n")
+    fast_text("\n\n Initiating Search \n\n")
     fast_text(f"{bcolors.WARNING}System Search currently semi-operational \nPlease build your search{bcolors.ENDC} \n\nPlease input your search term\n")
     ans1=input("      >>    ")
     fast_text("Please wait - search building\n")
@@ -109,10 +109,10 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
         fast_text(f"{bcolors.OKCYAN}4 matching item(s) found in {search_place}{bcolors.ENDC}\n")
 
         print(f"""
-        {bcolors.WARNING}Name:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}D.O.B:{bcolors.ENDC} 04/09/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}Current:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Notes:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Name:{bcolors.ENDC} Davies, Kieran    {bcolors.WARNING}D.O.B:{bcolors.ENDC} 04/09/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0600345     {bcolors.WARNING}Current:{bcolors.ENDC} 2 pending    {bcolors.WARNING}Notes:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Name:{bcolors.ENDC} Gregor, James     {bcolors.WARNING}D.O.B:{bcolors.ENDC} 04/09/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0998947     {bcolors.WARNING}Current:{bcolors.ENDC} Banned       {bcolors.WARNING}Notes:{bcolors.ENDC} {bcolors.FAIL}7 Unreturned - MAX FINE{bcolors.ENDC}
-        {bcolors.WARNING}Name:{bcolors.ENDC} Traynor, Mary     {bcolors.WARNING}D.O.B:{bcolors.ENDC} 04/09/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0967783     {bcolors.WARNING}Current:{bcolors.ENDC} 7 pending    {bcolors.WARNING}Notes:{bcolors.ENDC} Pre-order BIThalo
+        {bcolors.WARNING}Name:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}D.O.B:{bcolors.ENDC} 09/04/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}Current:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Notes:{bcolors.ENDC} N/A
+        {bcolors.WARNING}Name:{bcolors.ENDC} Davies, Kieran    {bcolors.WARNING}D.O.B:{bcolors.ENDC} 09/04/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0600345     {bcolors.WARNING}Current:{bcolors.ENDC} 2 pending    {bcolors.WARNING}Notes:{bcolors.ENDC} N/A
+        {bcolors.WARNING}Name:{bcolors.ENDC} Gregor, James     {bcolors.WARNING}D.O.B:{bcolors.ENDC} 09/04/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0998947     {bcolors.WARNING}Current:{bcolors.ENDC} Banned       {bcolors.WARNING}Notes:{bcolors.ENDC} {bcolors.FAIL}7 Unreturned - MAX FINE{bcolors.ENDC}
+        {bcolors.WARNING}Name:{bcolors.ENDC} Traynor, Mary     {bcolors.WARNING}D.O.B:{bcolors.ENDC} 09/04/77     {bcolors.WARNING}User Number:{bcolors.ENDC} LCC0967783     {bcolors.WARNING}Current:{bcolors.ENDC} 7 pending    {bcolors.WARNING}Notes:{bcolors.ENDC} Pre-order BIThalo
 """)
         fast_text("What would you like to do now? \n\n1 - Search Again? \n2 - Quit Search? \n Please type 1 or 2\n")
         again=input("      >>    ")
