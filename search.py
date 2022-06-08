@@ -49,7 +49,7 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
 # shows 2 searches for the number given - one is previous users, one is ours
     if ans2=="1":
         search_place="System Log"
-        print(f" {bcolors.OKGREEN} if {ans1} in {search_place} {bcolors.ENDC}")
+        print(f" {bcolors.OKGREEN} if \"{ans1}\" in {search_place} {bcolors.ENDC}")
         print(f" {bcolors.OKGREEN}      print(all_occurences()) {bcolors.ENDC}\n \n")
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
         fast_text(f"Searching for {ans1} in the {search_place} \n")
