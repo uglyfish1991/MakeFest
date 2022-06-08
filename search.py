@@ -32,7 +32,7 @@ import time
 
 def search_a(timeb): #takes variable from function call in main - couldn't do this any other way without circular imports?
     answers=["1","2","3","4"]
-    fast_text("\n\n Initiating Search \n\n")
+    fast_text("\n\nInitiating Search \n\n")
     fast_text(f"{bcolors.WARNING}System Search currently semi-operational \nPlease build your search{bcolors.ENDC} \n\nPlease input your search term\n")
     ans1=input("      >>    ")
     fast_text("Please wait - search building\n")
@@ -138,23 +138,18 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
         fast_text(f"Searching for {ans1} in the {search_place} \n")
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
-        fast_text(f"{bcolors.OKCYAN}12 matching item(s) found in {search_place}{bcolors.ENDC}\n")
+        fast_text(f"{bcolors.OKCYAN}8 matching item(s) found in {search_place}{bcolors.ENDC}\n")
 
         print(f"""
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-        {bcolors.WARNING}Title:{bcolors.ENDC} Batey, Stephen    {bcolors.WARNING}Author:{bcolors.ENDC} LCC0374992     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0 pending    {bcolors.WARNING}Genre:{bcolors.ENDC} N/A
-
-""")
+        {bcolors.WARNING}Title:{bcolors.ENDC} A Study of Benthic Life    {bcolors.WARNING}Author:{bcolors.ENDC} George Esmine     {bcolors.WARNING}ISBN:{bcolors.ENDC} 4839209047789    {bcolors.WARNING}Genre:{bcolors.ENDC} Science/Biology/Marine
+        {bcolors.WARNING}Title:{bcolors.ENDC} The Economy of Influence   {bcolors.WARNING}Author:{bcolors.ENDC} Lorraine Suggs    {bcolors.WARNING}ISBN:{bcolors.ENDC} 0090477193471    {bcolors.WARNING}Genre:{bcolors.ENDC} Finance/Self-Help
+        {bcolors.WARNING}Title:{bcolors.ENDC} Spanish for Beginners      {bcolors.WARNING}Author:{bcolors.ENDC} Carlos M. Suarez  {bcolors.WARNING}ISBN:{bcolors.ENDC} 0016780904773    {bcolors.WARNING}Genre:{bcolors.ENDC} Language/Spanish
+        {bcolors.WARNING}Title:{bcolors.ENDC} Who Made This? A Design    {bcolors.WARNING}Author:{bcolors.ENDC} Linda Sharpe      {bcolors.WARNING}ISBN:{bcolors.ENDC} 0098730904772    {bcolors.WARNING}Genre:{bcolors.ENDC} Art & Design/Study/Analysis
+        {bcolors.WARNING}Title:{bcolors.ENDC} A Time of Broken Glass     {bcolors.WARNING}Author:{bcolors.ENDC} Sarah M. Oakley   {bcolors.WARNING}ISBN:{bcolors.ENDC} 0768090477391    {bcolors.WARNING}Genre:{bcolors.ENDC} Thriller/Historic
+        {bcolors.WARNING}Title:{bcolors.ENDC} Britsh Hedge Wildlife      {bcolors.WARNING}Author:{bcolors.ENDC} Richard Stringson {bcolors.WARNING}ISBN:{bcolors.ENDC} 0904779826328    {bcolors.WARNING}Genre:{bcolors.ENDC} Science/Biology/Nature
+        {bcolors.WARNING}Title:{bcolors.ENDC} Javascript for Design      {bcolors.WARNING}Author:{bcolors.ENDC} James Goodman     {bcolors.WARNING}ISBN:{bcolors.ENDC} 0450904773407    {bcolors.WARNING}Genre:{bcolors.ENDC} Sciene/Technology/Internet
+        {bcolors.WARNING}Title:{bcolors.ENDC} A Ride on a Raven          {bcolors.WARNING}Author:{bcolors.ENDC} Hashi Takeyama    {bcolors.WARNING}ISBN:{bcolors.ENDC} 0938090477663    {bcolors.WARNING}Genre:{bcolors.ENDC} Fantasy/New Adult
+        """)
         fast_text("What would you like to do now? \n\n1 - Search Again? \n2 - Quit Search? \n Please type 1 or 2\n")
         again=input("      >>    ")
         while again !="1" and again !="2":

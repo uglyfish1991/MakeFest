@@ -57,10 +57,14 @@ def options():
         search_a(start_stamp) # the searching
         fast_text("What would you like to do? \n")
         options()
+    elif main_option=="5":
+        print("this is where we need to fit fail2ban in - hoooooow?")
+        fast_text("What would you like to do? \n")
+        options()
 
 
 
-fast_text(f"{bcolors.HEADER}         Welcome To\n Liverpool Central Library Server Management {bcolors.ENDC}\n\n")
+fast_text(f"{bcolors.HEADER}               Welcome To\n Liverpool Central Library Server Management {bcolors.ENDC}\n\n")
 fast_text("Please enter the password\n")
 password=input("     >>    ")
 while password !="090477":
