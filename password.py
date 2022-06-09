@@ -24,6 +24,7 @@ import datetime
 pin="090477"
 done_before=False
 login_stamp=datetime.datetime.now()
+pass_changed=False
 
 #######################################
 #                                     #
@@ -32,7 +33,7 @@ login_stamp=datetime.datetime.now()
 #######################################
 
 def login():
-    global pin, done_before
+    global pin, done_before, log_pin, new_pin, pass_changed
     fast_text("Sys Login: \n")
     log_pin=input("     >>    ")
 
@@ -44,13 +45,14 @@ def login():
     if done_before:
         fast_text(f"{bcolors.WARNING}Password changed successfully. Returning to main menu \n\n{bcolors.ENDC}")
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
-        return
+        pass_changed=True
+        return pin, pass_changed
 
     fast_text(f"{bcolors.WARNING}         **WARNING** \nChanges made here will impact the whole system \nYou may need to log in again after making changes\n {bcolors.ENDC}")
-    fast_text(f"{bcolors.WARNING}         **NOTE** \nPasswords should be change regularly. Your password was last changed {bcolors.OKGREEN}0 months 0 weeks 0 days 0 hours and 2 minutes ago \n {bcolors.ENDC}")
+    fast_text(f"{bcolors.WARNING}         **NOTE** \nPasswords should be change regularly.\n Your password was last changed {bcolors.OKGREEN}0 months 0 weeks 0 days 0 hours and 2 minutes ago \n {bcolors.ENDC}")
     wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
     fast_text(f"{bcolors.WARNING}Accessing System Root Password Settings \nCurrent Permissions: \n\n{bcolors.ENDC}")
-    print(f"""{bcolors.OKGREEN} if password=="{pin}:
+    print(f"""{bcolors.OKGREEN} if password=="{pin}":
             allow_access(True) {bcolors.ENDC}\n""")
     fast_text("What would you like to change the password to?\n")
     new_pin=input("     >>    ")
@@ -67,7 +69,7 @@ def login():
         pin=new_pin
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
         fast_text(f"{bcolors.WARNING}Current Permissions: \n{bcolors.ENDC}")
-        print(f"""{bcolors.OKGREEN} if password=="{pin}:
+        print(f"""{bcolors.OKGREEN} if password=="{pin}":
         allow_access(True) {bcolors.ENDC}\n\n""")
         fast_text(f"{bcolors.OKGREEN} You have successfully changed the password {bcolors.ENDC} \n")
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")

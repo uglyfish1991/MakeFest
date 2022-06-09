@@ -22,7 +22,7 @@ import time
 #          variables                  #
 #                                     #
 #######################################
-
+seen=False
 
 #######################################
 #                                     #
@@ -31,6 +31,7 @@ import time
 #######################################
 
 def search_a(timeb): #takes variable from function call in main - couldn't do this any other way without circular imports?
+    global seen
     answers=["1","2","3","4"]
     fast_text("\n\nInitiating Search \n\n")
     fast_text(f"{bcolors.WARNING}System Search currently semi-operational \nPlease build your search{bcolors.ENDC} \n\nPlease input your search term\n")
@@ -85,7 +86,7 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
         fast_text(f"Searching for {ans1} in the {search_place} \n")
         wait_text(f"{bcolors.OKBLUE}. . .{bcolors.ENDC}\n")
         fast_text(f"{bcolors.OKCYAN}1 matching item(s) found in {search_place}{bcolors.ENDC}\n")
-        print(f"""pass_log: Unkown User set_password({bcolors.OKCYAN} "090477"{bcolors.ENDC} at {time})
+        print(f"""pass_log: Unkown User set_password({bcolors.OKCYAN} "090477"{bcolors.ENDC} at {timeb})
 """)
         fast_text("What would you like to do now? \n\n1 - Search Again? \n2 - Quit Search? \n Please type 1 or 2\n")
         again=input("      >>    ")
@@ -123,14 +124,9 @@ def search_a(timeb): #takes variable from function call in main - couldn't do th
         if again=="1":
             search_a(timeb)
         else:
-            #this section is to make it look like the hacker is trying to log in again - we changed his password. This should lead us to failtoban
-            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD JOIN*** Incorrect, please try again \nYou have 999 tries remaining {bcolors.ENDC}\n")
-            time.sleep(2)
-            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD JOIN*** Incorrect, please try again \nYou have 999 tries remaining {bcolors.ENDC}\n")
-            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD JOIN*** Incorrect, please try again \nYou have 999 tries remaining {bcolors.ENDC}\n")
-            time.sleep(2)
-            fast_text(f"{bcolors.FAIL}***SYS PING PASSWORD JOIN*** Incorrect, please try again \nYou have 999 tries remaining {bcolors.ENDC}\n")           
-            return
+            seen=True
+            #this section is to make it look like the hacker is trying to log in again - we changed his password. This should lead us to failtoban        
+            return seen
     elif ans2=="4":
         search_place="Asset Catalogue"
         print(f" {bcolors.OKGREEN} if {ans1} in {search_place} {bcolors.ENDC}")
